@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+<head>
+    <title th:text="${title}"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <style>
+        .carousel-item img {
+            max-height: 500px; /* Adjust this value as needed */
+            object-fit: contain;
+            width: auto;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<header th:insert="~{blocks/header.html :: header}"></header>
+
+<main class="bg-white">
+    <div class="container">
+        <img src="/img/main_banner.jpg" class="d-block w-100 mx-auto rounded shadow" alt="asd">
+    </div>
+    <section>
+        <h2 class="d-flex justify-content-center mt-3">Популярное</h2>
+        <div class="container">
+            <div class="card" style="width: 18rem;">
+                <img src="#" class="card-img-top" alt="#">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="d-flex justify-content-center mt-3">Выгодная цена</h2>
+        <div class="container">
+            <div class="card" style="width: 18rem;">
+                <img src="#" class="card-img-top" alt="#">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer th:insert="~{blocks/footer.html :: footer}"></footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</html>

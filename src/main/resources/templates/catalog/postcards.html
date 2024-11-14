@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+<head>
+  <title th:text="${title}"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/catalog.css">
+</head>
+<body>
+<header th:insert="~{blocks/header.html :: header}"></header>
+
+<main class="bg-white">
+  <div th:insert="~{blocks/card.html :: card}"></div>
+</main>
+
+<footer th:insert="~{blocks/footer.html :: footer}"></footer>
+</body>
+<script src="/js/bootstrap.bundle.js"></script>
+</html>

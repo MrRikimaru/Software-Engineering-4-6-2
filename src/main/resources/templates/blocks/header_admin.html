@@ -1,0 +1,17 @@
+<div th:fragment="header">
+  <header class="bg-white">
+    <div class="container">
+      <div class="row mt-1">
+        <div class="col-auto">
+          <a class="navbar-brand" href="/">
+            <img class="header-logo" src="/img/header/logo.jpg" alt="Sakura">
+          </a>
+        </div>
+        <form class="col d-flex justify-content-end align-items-center" th:action="@{/logout}" method="post">
+          <button type="submit" class="btn btn-light border-1">Logout</button>
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="border mt-2 mb-2"></div>
+</div>

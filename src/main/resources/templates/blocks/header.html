@@ -1,0 +1,191 @@
+<div th:fragment="header">
+    <header class="bg-light">
+        <div class="container">
+            <div class="row mt-1">
+                <div class="col-auto">
+                    <a class="navbar-brand" href="/">
+                        <img class="header-logo" src="/img/header/logo.jpg" alt="Sakura">
+                    </a>
+                </div>
+                <div class="col justify-content-center d-flex align-items-center">
+                    <form class="search-form form-inline col-8">
+                        <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search"
+                               aria-label="Search">
+                    </form>
+                </div>
+                <form class="col-auto mt-1" th:action="@{/login}">
+                    <button type="submit" class="btn btn-light border-1">Login</button>
+                </form>
+            </div>
+        </div>
+    </header>
+    <header class="bg-light pb-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-auto mt-1">
+                    <button class="btn btn-light border-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                             class="bi bi-shop mb-1" viewBox="0 0 16 16">
+                            <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5M4 15h3v-5H4zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm3 0h-2v3h2z"/>
+                        </svg>
+                        <span>Адреса магазинов</span></button>
+                </div>
+                <div class="mt-1 col d-flex justify-content-end align-items-center">
+                    <div class="me-3">
+                        <a class="text-decoration-none text-black" href="www.instagram.com/Sakura">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                 class="bi bi-instagram me-1" viewBox="0 0 16 16">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                            </svg>
+                        </a>
+                        <a class="text-decoration-none text-black" href="t.me/Sakura">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 50 50">
+                                <path d="M46.137,6.552c-0.75-0.636-1.928-0.727-3.146-0.238l-0.002,0C41.708,6.828,6.728,21.832,5.304,22.445	c-0.259,0.09-2.521,0.934-2.288,2.814c0.208,1.695,2.026,2.397,2.248,2.478l8.893,3.045c0.59,1.964,2.765,9.21,3.246,10.758	c0.3,0.965,0.789,2.233,1.646,2.494c0.752,0.29,1.5,0.025,1.984-0.355l5.437-5.043l8.777,6.845l0.209,0.125	c0.596,0.264,1.167,0.396,1.712,0.396c0.421,0,0.825-0.079,1.211-0.237c1.315-0.54,1.841-1.793,1.896-1.935l6.556-34.077	C47.231,7.933,46.675,7.007,46.137,6.552z M22,32l-3,8l-3-10l23-17L22,32z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="me-3">
+                        <a class="text-decoration-none text-black" href="tel:+78463326040">+7(846)332-60-40</a>
+                    </div>
+                    <div class="me-3">
+<!--                        asdasdasdasdasd-->
+                        <div class="dropdown">
+                            <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                                </svg>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cartDropdown" id="cartDropdownMenu">
+                                <div th:if="${cartItemCount == 0}" class="dropdown-item">Cart is empty</div>
+                                <div th:if="${cartItemCount > 0}" th:each="item : ${cartServiceItems}" class="dropdown-item">
+                                    <div class="d-flex align-items-center">
+                                        <img th:src="${item.product.imgURL}" class="img-thumbnail" alt="Product Image" width="50" height="50">
+                                        <div class="ms-2">
+                                            <span th:text="${item.product.name}" class="text-truncate">Product Name</span>
+                                            <div class="d-flex align-items-center">
+                                                <button class="btn btn-sm btn-outline-secondary me-2" onclick="updateQuantity(${item.product.id}, 'decrease')">-</button>
+                                                <span th:text="${item.quantity}">1</span>
+                                                <button class="btn btn-sm btn-outline-secondary ms-2" onclick="updateQuantity(${item.product.id}, 'increase')">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-center" href="/cart">View Cart</a>
+                            </div>
+                        </div>
+
+                        <!--                        <div class="dropdown">-->
+<!--                            <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">-->
+<!--                                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>-->
+<!--                                </svg>-->
+<!--                            </button>-->
+<!--                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cartDropdown">-->
+<!--                                <div th:if="${cartItemCount == 0}" class="dropdown-item">Cart is empty</div>-->
+<!--                                <div th:if="${cartItemCount > 0}" th:each="item : ${cartServiceItems}" class="dropdown-item">-->
+<!--                                    <div class="d-flex align-items-center">-->
+<!--                                        <img th:src="${item.product.imgURL}" class="img-thumbnail" alt="Product Image" width="50" height="50">-->
+<!--                                        <div class="ms-2">-->
+<!--                                            <span th:text="${item.product.name}" class="text-truncate">Product Name</span>-->
+<!--                                            <div class="d-flex align-items-center">-->
+<!--                                                <form th:action="@{/cart/decreaseQuantity}" method="get" class="me-2">-->
+<!--                                                    <input type="hidden" name="productId" th:value="${item.product.id}">-->
+<!--                                                    <button type="submit" class="btn btn-sm btn-outline-secondary">-</button>-->
+<!--                                                </form>-->
+<!--                                                <span th:text="${item.quantity}">1</span>-->
+<!--                                                <form th:action="@{/cart/increaseQuantity}" method="post" class="ms-2">-->
+<!--                                                    <input type="hidden" name="productId" th:value="${item.product.id}">-->
+<!--                                                    <button type="submit" class="btn btn-sm btn-outline-secondary">+</button>-->
+<!--                                                </form>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="dropdown-divider"></div>-->
+<!--                                <a class="dropdown-item text-center" href="/cart">View Cart</a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <header class="bg-white">
+        <div class="container">
+            <div class="row justify-content-center mt-1">
+                <div class="col-auto">
+                    <div class="d-flex flex-column align-items-center">
+                        <a href="/catalog/apiece"><img src="/img/header/fl.jpg" height="100" width="100"
+                                                       class="img-fluid rounded-circle border mb-2 shadow"
+                                                       alt="Описание изображения"></a>
+                        <a class="text-decoration-none text-black" href="/catalog/apiece">Поштучно</a>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="d-flex flex-column align-items-center">
+                        <a href="/catalog/composition">
+                            <img src="/img/header/flowers_in_a_basket.jpg" height="100" width="100"
+                                 class="img-fluid rounded-circle border mb-2 shadow" alt="Описание изображения">
+                        </a>
+                        <a class="text-decoration-none text-black" href="/catalog/composition">Композиции</a>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="d-flex flex-column align-items-center">
+                        <a href="/catalog/bouquets">
+                            <img src="/img/header/flower_bouquets.jpg" height="100" width="100"
+                                 class="img-fluid rounded-circle border mb-2 shadow" alt="Описание изображения">
+                        </a>
+                        <a class="text-decoration-none text-black" href="/catalog/bouquets">Букеты</a>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="d-flex flex-column align-items-center">
+                        <a href="/catalog/roses">
+                            <img src="/img/header/roses.png" height="100" width="100"
+                                 class="img-fluid rounded-circle border mb-2 shadow" alt="Описание изображения">
+                        </a>
+                        <a class="text-decoration-none text-black" href="/catalog/roses">Розы</a>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="d-flex flex-column align-items-center">
+                        <a href="/catalog/toys">
+                            <img src="/img/header/toys.jpg" height="100" width="100"
+                                 class="img-fluid rounded-circle border mb-2 shadow" alt="Описание изображения">
+                        </a>
+                        <a class="text-decoration-none text-black" href="/catalog/toys">Игрушки</a>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="d-flex flex-column align-items-center">
+                        <a href="/catalog/balloons">
+                            <img src="/img/header/baloons.jpg" height="100" width="100"
+                                 class="img-fluid rounded-circle border mb-2 shadow" alt="Описание изображения">
+                        </a>
+                        <a class="text-decoration-none text-black" href="/catalog/balloons">Шары</a>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="d-flex flex-column align-items-center">
+                        <a href="/catalog/present">
+                            <img src="/img/header/present1.jpg" height="100" width="100"
+                                 class="img-fluid rounded-circle border mb-2 shadow" alt="Описание изображения">
+                        </a>
+                        <a class="text-decoration-none text-black" href="/catalog/present">Подарки</a>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="d-flex flex-column align-items-center">
+                        <a href="/catalog/postcards">
+                            <img src="/img/header/postcards.jpg" height="100" width="100"
+                                 class="img-fluid rounded-circle border mb-2 shadow" alt="Описание изображения">
+                        </a>
+                        <a class="text-decoration-none text-black" href="/catalog/postcards">Открытки</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>

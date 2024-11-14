@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+<head>
+    <title>Apiece</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/catalog.css">
+</head>
+<body>
+<header th:insert="~{blocks/header.html :: header}"></header>
+
+<main class="bg-white">
+<!--    <p class="text-center" th:text="${title}"></p>-->
+    <div th:insert="~{blocks/card.html :: card}"></div>
+</main>
+
+<footer th:insert="~{blocks/footer.html :: footer}"></footer>
+</body>
+<script src="/js/bootstrap.bundle.js"></script>
+<script>
+    function updateQuantity(productId, action) {
+        const url = action === 'increase' ? '/cart/increaseQuantity' : '/cart/decreaseQuantity';
+
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: new URLSearchParams({productId: productId})
+        })
+            .then(response => response.json())
+            .then(data => {
+                updateCartDropdown(data);
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    function updateCartDropdown(cart) {
+        const cartDropdownMenu = document.getElementById('cartDropdownMenu');
+        cartDropdownMenu.innerHTML = '';
+
+        if (cart.items.length === 0) {
+            cartDropdownMenu.innerHTML = '<div class="dropdown-item">Cart is empty</div>';
+        } else {
+            cart.items.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.className = 'dropdown-item';
+                itemElement.innerHTML = `
+                <div class="d-flex align-items-center">
+                    <img src="${item.product.imgURL}" class="img-thumbnail" alt="Product Image" width="50" height="50">
+                    <div class="ms-2">
+                        <span class="text-truncate">${item.product.name}</span>
+                        <div class="d-flex align-items-center">
+                            <button class="btn btn-sm btn-outline-secondary me-2" onclick="updateQuantity(${item.product.id}, 'decrease')">-</button>
+                            <span>${item.quantity}</span>
+                            <button class="btn btn-sm btn-outline-secondary ms-2" onclick="updateQuantity(${item.product.id}, 'increase')">+</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+                cartDropdownMenu.appendChild(itemElement);
+            });
+
+            const divider = document.createElement('div');
+            divider.className = 'dropdown-divider';
+            cartDropdownMenu.appendChild(divider);
+
+            const viewCartLink = document.createElement('a');
+            viewCartLink.className = 'dropdown-item text-center';
+            viewCartLink.href = '/cart';
+            viewCartLink.textContent = 'View Cart';
+            cartDropdownMenu.appendChild(viewCartLink);
+        }
+    }
+
+</script>
+</html>
