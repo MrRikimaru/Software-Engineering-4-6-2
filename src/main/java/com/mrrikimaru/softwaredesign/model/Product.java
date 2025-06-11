@@ -29,9 +29,6 @@ public class Product {
         this.imgURL = imgURL;
     }
 
-//    public Product(String name, String category, String description, double cost, MultipartFile imgURL) {
-//    }
-
     public Long getId() {
         return id;
     }
